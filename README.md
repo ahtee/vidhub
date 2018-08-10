@@ -4,7 +4,7 @@
 
 Clone the repo to your local machine
 ```
-git clone git@github.build.ge.com:Digital-CT-APS-WebServices/app-config-json.git
+git clone git@github.build.ge.com:Digital-CT-APS-WebServices/app-config-json-react.git
 ```
 
 It will create a directory called **app-config-json** inside the current folder.
