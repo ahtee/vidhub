@@ -13,8 +13,9 @@ Inside that directory, it will have the initial project structure and other appl
 ```
 app-config-json
 ├── README.md
-├── node_modules
+├── node_modules/
 ├── package.json
+├── package-lock.json
 ├── .gitignore
 ├── public
 │   ├── favicon.ico
@@ -27,6 +28,9 @@ app-config-json
     ├── index.css
     ├── index.js
     ├── logo.svg
+    ├── Navigation.css
+    ├── Navigation.js
+    ├── Navigation.test.js
     └── registerServiceWorker.js
 ```
 
