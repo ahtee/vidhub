@@ -1,1 +1,13 @@
+.res-block {
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 5px;
+}
 
+.login-max-width {
+  max-width: 500px;
+}
+
+.jumbotron {
+  min-height: 500px;
+}
