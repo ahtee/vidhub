@@ -10,6 +10,7 @@ import {
   NavLink
  } from 'reactstrap';
 
+
 export default class App extends Component {
   constructor(props) {
     super(props);
@@ -28,17 +29,26 @@ export default class App extends Component {
 
   render() {
     return (
+      <div className="container">
       <Navbar color="dark" dark expand="md">
           <NavbarBrand href="/">Generate JSON</NavbarBrand>
+
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
+            <NavItem>
+              <NavLink className="mt-1">Generate</NavLink>
+            </NavItem>
               <NavItem>
-                <NavLink href="https://github.build.ge.com//Digital-CT-APS-WebServices/app-config-json"><i className="fab fa-github fa-2x"></i></NavLink>
+                <NavLink href="/" className="mt-1">Log In</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="https://github.build.ge.com//Digital-CT-APS-WebServices/app-config-json" target="_blank"><i className="fab fa-github fa-2x"></i></NavLink>
               </NavItem>
             </Nav>
           </Collapse>
         </Navbar>
+        </div>
     );
   }
 }
