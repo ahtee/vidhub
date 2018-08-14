@@ -1,3 +1,8 @@
+body {
+  background-color: #aaa;
+}
+
+
 .res-block {
   display: inline-block;
   background-color: #eee;
