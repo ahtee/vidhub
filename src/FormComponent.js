@@ -38,8 +38,8 @@ var data = {
                 jdbcdb1: {
                     auth: "Container",
                     type: "javax.sql.DataSource",
-                    username: "@secrect:/app/UAI123345/db1/username",
-                    password: "[DatabasePassword]",
+                    username: "@secret:/app/UAI123345/db1/username", // Fill DB username here
+                    password: "[DatabasePassword]", //Fill DB Password Here
                     driverClassName: "com.mysql.jdbc.Driver",
                     url: "jdbc:mysql:/[yourserver]:3306/[yourapplication]",
                     maxActive: "15",
@@ -124,6 +124,11 @@ export default class FormComponent extends Component {
 
   render() {
     const { res } = this.state;
+    const options = [];
+    for (var i in data.tomcat.java.opt) {
+      options.push(<option value={data.tomcat.java.opt[i]} key={data.tomcat.java.opt[i]}>{data.tomcat.java.opt[i]}</option>)
+    }
+
 
     return (
       <Form row="true" onSubmit={this.handleSubmit} target="_blank">
@@ -156,7 +161,7 @@ export default class FormComponent extends Component {
 
         <FormGroup className="mt-3 mr-sm-2 mb-sm-0">
           <Label for="filename">Deployment File:</Label>
-          <Input type="file" name="filename" id="filename" pattern="*.war" value={this.state.filename} onChange={this.handleChange}/>
+          <Input type="file" name="filename" id="filename"  value={[this.state.filename]} onChange={this.handleChange}/>
           <FormText color="muted">
             There is an upload file size limit of 10 Mb.
           </FormText>
@@ -180,15 +185,20 @@ export default class FormComponent extends Component {
 
         <FormGroup className="mt-3 mr-sm-2 mb-sm-0">
           <Label htmlFor="middleware">Environment:</Label>
-            <Input type="text" name="middleware" id="middleware" disabled value="Tomcat" onChange={this.handleChange} required defaultValue="" />
-
-
+            <Input type="text" name="middleware" id="middleware" disabled onChange={this.handleChange} defaultValue="tomcat" />
         </FormGroup>
 
-        <FormGroup>
+        <FormGroup className="mt-3 mr-sm-2 mb-sm-0">
+          <Label for="javaOpts">Select Multiple</Label>
+          <Input type="select" name="javaOpts" id="javaOpts" multiple>
+            {options.map((i) => {
+              return (<option value={i} key={i}>{i}</option>)
+            })}
+          </Input>
+        </FormGroup>
 
+        <FormGroup className="mt-3 mr-sm-2 mb-sm-0">
             <Button type="submit" value="Submit" className="btn btn-success mt-3" block="true">Submit</Button>
-          
         </FormGroup>
 
         <div className="mt-3 mx-auto container res-block" md="6">
