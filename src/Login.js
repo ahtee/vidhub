@@ -6,7 +6,7 @@ export default class Login extends Component {
 
   render() {
     return (
-    <div className="mt-5 container">
+    <div className="container-fluid">
       <Jumbotron>
         <Row>
           <Col lg="8" md="6" sm="12">

@@ -29,7 +29,7 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="container-fluid">
       <Navbar color="dark" dark expand="md">
           <NavbarBrand href="/">Generate JSON</NavbarBrand>
 
