@@ -30,13 +30,13 @@ export default class Login extends Component {
                     <Label htmlFor="user-password">Password</Label>
                     <Input type="password" name="user-password" id="user-password" required/>
                   </FormGroup>
-                  <Button type="submit" className="btn btn-success" block>Log In</Button>
+                  <Button type="submit" className="btn btn-success" block="true">Log In</Button>
                   <Row className="mt-2">
                     <Col sm="6">
-                      <a className="mt-3" href="/" block>Log In with SAML</a>
+                      <a className="mt-3" href="/" block="true">Log In with SAML</a>
                     </Col>
-                    <Col sm="6" classname="ml-auto">
-                      <a className="mt-3" href="/" block>Forgot Password?</a>
+                    <Col sm="6" className="ml-auto">
+                      <a className="mt-3" href="/" block="true">Forgot Password?</a>
                     </Col>
                   </Row>
                 </Form>
