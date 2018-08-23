@@ -126,17 +126,20 @@ export default class FormComponent extends Component {
     const { res } = this.state;
 
     return (
-      <Form row="true" onSubmit={this.handleSubmit}>
+      <Form row="true" onSubmit={this.handleSubmit} target="_blank">
 
         <FormGroup className="mt-3 mr-sm-2 mb-sm-0">
           <Label htmlFor="uai">Application UAI:</Label>
-            <Input type="text" name="uai" id="uai" pattern="^UAI[0-9]{5,}" value={this.state.uai} onChange={this.handleChange} />
+          <Input type="text" name="uai" id="uai" pattern="^UAI[0-9]{5,7}" value={this.state.uai} onChange={this.handleChange} />
+          <FormText color="muted">
+            Input must start with <b>UAI</b> and include 5-7 numbers.
+          </FormText>
         </FormGroup>
 
         <FormGroup className="mt-3 mr-sm-2 mb-sm-0">
           <Label htmlFor="env">Environment:</Label>
-            <Input type="select" name="env" id="env" value={this.state.env} onChange={this.handleChange} required>
-              <option disabled selected value=""> -- Select an Environment -- </option>
+            <Input type="select" name="env" id="env" value={this.state.env} onChange={this.handleChange} required defaultValue="">
+              <option disabled value=""> -- Select an Environment -- </option>
               <option value="dev">Development</option>
               <option value="stg">Stage / Test</option>
               <option value="prod">Production</option>
@@ -144,8 +147,11 @@ export default class FormComponent extends Component {
         </FormGroup>
 
         <FormGroup className="mt-3 mr-sm-2 mb-sm-0">
-          <Label htmlFor="app">App Name:</Label>
+          <Label htmlFor="app">Application Name:</Label>
           <Input type="text" name="app" id="app" value={this.state.app} onChange={this.handleChange}/>
+          <FormText color="muted">
+            Enter the application name as it is shown in ServiceNow.
+          </FormText>
         </FormGroup>
 
         <FormGroup className="mt-3 mr-sm-2 mb-sm-0">
@@ -159,17 +165,30 @@ export default class FormComponent extends Component {
         <FormGroup className="mt-3 mr-sm-2 mb-sm-0">
           <Label for="source">Source:</Label>
           <Input type="url" name="source" id="source" disabled placeholder="https://s3.amazonaws.com/#{this.state.app}/#{this.state.filename}/sample.war" value={this.state.source} onChange={this.handleChange}/>
+          <FormText color="muted">
+            Non-Editable field. Field only displays the Amazon Web Services S3 bucket location for your application.
+          </FormText>
         </FormGroup>
 
         <FormGroup className="mt-3 mr-sm-2 mb-sm-0">
           <Label for="checksum">Checksum:</Label>
           <Input type="password" name="checksum" id="checksum" value={this.state.source} onChange={this.handleChange}/>
+          <FormText color="muted">
+            Enter the 64-character checksum for the Applications deployment file.
+          </FormText>
+        </FormGroup>
+
+        <FormGroup className="mt-3 mr-sm-2 mb-sm-0">
+          <Label htmlFor="middleware">Environment:</Label>
+            <Input type="text" name="middleware" id="middleware" disabled value="Tomcat" onChange={this.handleChange} required defaultValue="" />
+
+
         </FormGroup>
 
         <FormGroup>
-          <Col sm="12" md="12">
-            <Button type="submit" value="Submit" className="btn btn-success mt-3" block>Submit</Button>
-          </Col>
+
+            <Button type="submit" value="Submit" className="btn btn-success mt-3" block="true">Submit</Button>
+          
         </FormGroup>
 
         <div className="mt-3 mx-auto container res-block" md="6">
