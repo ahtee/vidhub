@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import FormComponent from './FormComponent';
+// import App from './App';
+// import FormComponent from './FormComponent';
 
 
 export default class App extends Component {
@@ -9,7 +10,7 @@ export default class App extends Component {
 
     return (
       <div className="container mt-4">
-        <FormComponent />
+        // <Navigation />
       </div>
     );
   }

@@ -7,8 +7,9 @@ import Navigation from './Navigation';
 import registerServiceWorker from './registerServiceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-ReactDOM.render(<Login />, document.getElementById('login'));
-ReactDOM.render(<Navigation />, document.getElementById('nav'));
+ReactDOM.render(<Login />, document.getElementById('root'));
 ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Navigation />, document.getElementById('nav'));
+// ReactDOM.render(<App />, document.getElementById('root'));
 
 registerServiceWorker();

@@ -12,13 +12,13 @@ var data = {
     tomcat: {
         java: {
             opt: [
-                "-Xms512m",
-                "-Xmx512m",
-                "-Dfile.encoding=UTF-8",
-                "-Djava.security.egd=file:/dev/./urandom",
-                "-Dsun.net.inetaddr.ttl=30",
-                "-Djava.net.preferIPv4Stack=true",
-                "-Djava.net.preferIPv4Addresses=true"
+                "-Xms512m", //Default
+                "-Xmx512m", //Default
+                "-Dfile.encoding=UTF-8", //Default
+                "-Djava.security.egd=file:/dev/./urandom", //Default
+                "-Dsun.net.inetaddr.ttl=30", //Default
+                "-Djava.net.preferIPv4Stack=true", //Default
+                "-Djava.net.preferIPv4Addresses=true" //Default
             ]
         },
         server: {
@@ -161,7 +161,7 @@ export default class FormComponent extends Component {
 
         <FormGroup className="mt-3 mr-sm-2 mb-sm-0">
           <Label for="filename">Deployment File:</Label>
-          <Input type="file" name="filename" id="filename"  value={[this.state.filename]} onChange={this.handleChange}/>
+          <Input type="file" name="filename" id="filename"  value={this.state.filename} onChange={this.handleChange}/>
           <FormText color="muted">
             There is an upload file size limit of 10 Mb.
           </FormText>
@@ -169,7 +169,7 @@ export default class FormComponent extends Component {
 
         <FormGroup className="mt-3 mr-sm-2 mb-sm-0">
           <Label for="source">Source:</Label>
-          <Input type="url" name="source" id="source" disabled placeholder="https://s3.amazonaws.com/#{this.state.app}/#{this.state.filename}/sample.war" value={this.state.source} onChange={this.handleChange}/>
+          <Input type="url" name="source" id="source" disabled placeholder="'https://s3.amazonaws.com/'\{this.state.app\}'/+ \{this.state.filename\}/sample.war'" value={this.state.source} onChange={this.handleChange}/>
           <FormText color="muted">
             Non-Editable field. Field only displays the Amazon Web Services S3 bucket location for your application.
           </FormText>
@@ -189,8 +189,8 @@ export default class FormComponent extends Component {
         </FormGroup>
 
         <FormGroup className="mt-3 mr-sm-2 mb-sm-0">
-          <Label for="javaOpts">Select Multiple</Label>
-          <Input type="select" name="javaOpts" id="javaOpts" multiple>
+          <Label for="javaOpts">Config Java Opts</Label>
+          <Input type="select" name="javaOpts" id="javaOpts" multiple disabled defaultValue="['-Xms512m', '-Xmx512m', '-Dfile.encoding=UTF-8', '-Djava.security.egd=file:/dev/./urandom', '-Dsun.net.inetaddr.ttl=30', '-Djava.net.preferIPv4Stack=true', '-Djava.net.preferIPv4Addresses=true']">
             {options.map((i) => {
               return (<option value={i} key={i}>{i}</option>)
             })}
