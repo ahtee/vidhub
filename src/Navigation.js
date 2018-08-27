@@ -34,10 +34,10 @@ export default class App extends Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
             <NavItem>
-              <NavLink className="mt-1" href="/gen">Generate</NavLink>
+              <NavLink className="mt-1" activeClassName="active" href="/gen" exact>Generate</NavLink>
             </NavItem>
               <NavItem>
-                <NavLink className="mt-1" href="/">Login</NavLink>
+                <NavLink className="mt-1" activeClassName="active" href="/" exact>Login</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="https://github.build.ge.com//Digital-CT-APS-WebServices/app-config-json" target="_blank"><i className="fab fa-github fa-2x"></i></NavLink>

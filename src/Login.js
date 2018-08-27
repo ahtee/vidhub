@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Jumbotron, Button, Form, FormGroup, Label, Input, Card, CardTitle, Row, Col } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input, Card, Row, Col } from 'reactstrap';
 
 export default class Login extends Component {
 
