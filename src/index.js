@@ -1,15 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Login from './Login';
-import App from './App';
-import Navigation from './Navigation';
+import PageComponent from './PageComponent';
 import registerServiceWorker from './registerServiceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-ReactDOM.render(<Login />, document.getElementById('root'));
-ReactDOM.render(<App />, document.getElementById('root'));
-ReactDOM.render(<Navigation />, document.getElementById('nav'));
+ReactDOM.render(<PageComponent />, document.getElementById('root'));
 // ReactDOM.render(<App />, document.getElementById('root'));
 
 registerServiceWorker();

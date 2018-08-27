@@ -6,7 +6,7 @@ export default class Login extends Component {
 
   render() {
     return (
-    <div className="container-fluid">
+    
       <Jumbotron>
         <Row>
           <Col lg={8} md={6} sm={12}>
@@ -44,9 +44,7 @@ export default class Login extends Component {
           </Col>
         </Row>
       </Jumbotron>
-    </div>
+
   );
   }
-
-
 }

@@ -2,6 +2,10 @@
 
 # JSON Config Generator Application
 
+Allowing customers to generate their application config file for Middleware (Tomcat) to integrate with a Chef Cookbook.
+
+
+
 ## Getting started
 
 Clone the repo to your local machine

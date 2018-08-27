@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './App.css';
 import PageComponent from './PageComponent';
 import {
@@ -16,18 +17,10 @@ export default class App extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {page: "HomePage"};
-    this.handleShowPage = this.handleShowPage.bind(this)
-
     this.toggle = this.toggle.bind(this);
     this.state = {
       isOpen: false
     };
-  }
-
-  handleShowPage(page) {
-    this.state.page = page
-    this.setState(this.state);
   }
 
   toggle() {
@@ -38,17 +31,16 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className="container-fluid">
-      <Navbar color="dark" dark expand="md">
-          <NavbarBrand>Generate JSON</NavbarBrand>
+        <Navbar color="dark" dark expand="md">
+          <NavbarBrand className="text-white">Generate JSON</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
             <NavItem>
-              <NavLink className="mt-1" onClick={() => this.props.handleShowPage("HomePage")}>Generate</NavLink>
+              <NavLink className="mt-1"><Link to="/generate" activeClassName="active">Generate</Link></NavLink>
             </NavItem>
               <NavItem>
-                <NavLink className="mt-1" onClick={() => this.props.handleShowPage("ListWorkersPage")}>Log In</NavLink>
+                <NavLink className="mt-1" to="/" activeClassName="active"><Link to="/" activeClassName="active">Login</Link></NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="https://github.build.ge.com//Digital-CT-APS-WebServices/app-config-json" target="_blank"><i className="fab fa-github fa-2x"></i></NavLink>
@@ -56,7 +48,6 @@ export default class App extends Component {
             </Nav>
           </Collapse>
         </Navbar>
-        </div>
     );
   }
 }
