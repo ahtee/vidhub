@@ -1,4 +1,4 @@
-# JSON Config Generator Application
+# :shipit: JSON Config Generator Application :shipit:
 
 Allowing customers to generate their application config file for Middleware (Tomcat) to integrate with a Chef Cookbook. Built in ReactJS and using the Facebook react boilerplate.
 
