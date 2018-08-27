@@ -1,8 +1,6 @@
-![React Broken](https://img.shields.io/badge/React-Broken-red.svg)
-
 # JSON Config Generator Application
 
-Allowing customers to generate their application config file for Middleware (Tomcat) to integrate with a Chef Cookbook.
+Allowing customers to generate their application config file for Middleware (Tomcat) to integrate with a Chef Cookbook. Built in ReactJS and using the Facebook react boilerplate.
 
 ![screenshot.jpg](./docs/screenshot.JPG)
 
