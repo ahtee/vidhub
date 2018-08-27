@@ -1,6 +1,7 @@
 # JSON Config Generator Application
 
 Allowing customers to generate their application config file for Middleware (Tomcat) to integrate with a Chef Cookbook. Built in ReactJS and using the Facebook react boilerplate.
+
 ---
 ## App Screenshots
 
@@ -69,4 +70,4 @@ Open http://localhost:3000 to view it in the browser.
 - [x] Add React Routing
 - [ ] Receive final JSON model to fill
 - [ ] Implement form to populate JSON
-- [ ] Output JSON to a new tab on clicking Submit 
+- [ ] Output JSON to a new tab on clicking Submit
