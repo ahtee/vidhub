@@ -1,4 +1,6 @@
-# app-config-json
+![React Broken](https://img.shields.io/badge/React-Broken-red.svg)
+
+# JSON Config Generator Application
 
 ## Getting started
 
@@ -52,3 +54,7 @@ yarn start
 
 Runs the app in development mode.
 Open http://localhost:3000 to view it in the browser.
+
+## Wishlist
+
+- [ ] Add React Routing
