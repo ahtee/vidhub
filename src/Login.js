@@ -6,44 +6,107 @@ export default class Login extends Component {
 
   render() {
     return (
-    
-      <Jumbotron>
-        <Row>
-          <Col lg={8} md={6} sm={12}>
-            <h1 className="display-3">Generate JSON</h1>
-            <p className="lead">This is a simple hero unit, a simple Jumbotron-style component for calling extra attention to featured content or information.</p>
-            <hr className="mt-2" />
-            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-            <p className="lead">
-              <Button color="primary">Learn More</Button>
-            </p>
-          </Col>
-          <Col lg={4} md={6} sm={12}>
-            <Card body className="login-max-width">
-              <CardTitle>Returning Users</CardTitle>
-                <Form>
-                  <FormGroup>
-                    <Label htmlFor="user-email">Email:</Label>
-                    <Input type="email" name="user-email" id="user-email" placeholder="John.Smith@ge.com" required/>
-                  </FormGroup>
-                  <FormGroup>
-                    <Label htmlFor="user-password">Password</Label>
-                    <Input type="password" name="user-password" id="user-password" required/>
-                  </FormGroup>
-                  <Button type="submit" className="btn btn-success" block="true">Log In</Button>
-                  <Row className="mt-2">
-                    <Col sm="6">
-                      <a className="mt-3" href="/" block="true">Log In with SAML</a>
-                    </Col>
-                    <Col sm="6" className="ml-auto">
-                      <a className="mt-3" href="/" block="true">Forgot Password?</a>
-                    </Col>
-                  </Row>
-                </Form>
-            </Card>
-          </Col>
-        </Row>
-      </Jumbotron>
+
+        <div className="container mt-5">
+          <Row>
+            <Col sm={7} className="pull-left">
+              <h1 className="display-3">Generate JSON</h1>
+              <p className="lead">This is a simple hero unit, a simple Jumbotron-style component for calling extra attention to featured content or information.</p>
+              <hr className="mt-2" />
+              <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+              <p className="lead">
+                <Button color="primary">Learn More</Button>
+              </p>
+            </Col>
+            <Col sm={5} className="pull-right">
+              <Card body className="login-max-width">
+                <ul class="nav nav-tabs">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#ldapldap" data-toggle="tab" aria-expanded="true">LDAP</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#login-pane" data-toggle="tab" aria-expanded="false">Standard</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#register-pane" data-toggle="tab" aria-expanded="false">Register</a>
+                  </li>
+                </ul>
+                <div className="tab-content mt-3">
+                  <div className="active login-box tab-pane" id="ldapldap" role="tabpanel">
+                    <Form>
+                      <FormGroup>
+                        <Label htmlFor="user-email">LDAP Username:</Label>
+                        <Input type="text" name="ldap-username" id="ldap-username" required/>
+                      </FormGroup>
+                      <FormGroup>
+                        <Label htmlFor="user-password">Password</Label>
+                        <Input type="password" name="user-password" id="user-password" required/>
+                      </FormGroup>
+                      <div class="remember-me checkbox">
+                        <FormGroup className="ml-4">
+                          <Label htmlFor="remember">
+                            <Input type="checkbox" name="remember" id="remember" value="0" />
+                            <span>Remember me</span>
+                          </Label>
+                        </FormGroup>
+                      </div>
+                      <Button type="submit" className="btn btn-success" block="true">Sign In</Button>
+                    </Form>
+                  </div>
+                  <div className="login-box tab-pane" id="login-pane" role="tabpanel">
+                    <Form>
+                      <FormGroup>
+                        <Label htmlFor="user-email">Username or email:</Label>
+                        <Input type="email" name="user-email" id="user-email" required/>
+                      </FormGroup>
+                      <FormGroup>
+                        <Label htmlFor="user-password">Password</Label>
+                        <Input type="password" name="user-password" id="user-password" required/>
+                      </FormGroup>
+                      <div class="remember-me checkbox">
+                        <FormGroup className="ml-4">
+                          <Label htmlFor="remember">
+                            <Input type="checkbox" name="remember" id="remember" value="0" />
+                            <span className="pull-left">Remember me</span>
+                            <div className="pull-right forgot-password">
+                              <a href="/">Forgot your password?</a>
+                            </div>
+                          </Label>
+                        </FormGroup>
+                      </div>
+                      <Button type="submit" className="btn btn-success" block="true">Sign In</Button>
+                    </Form>
+                  </div>
+                  <div className="login-box tab-pane" id="register-pane" role="tabpanel">
+                    <Form>
+                      <FormGroup>
+                        <Label htmlFor="name">Full name:</Label>
+                        <Input type="text" name="fullname" id="fullname" required/>
+                      </FormGroup>
+                      <FormGroup>
+                        <Label htmlFor="username">Username:</Label>
+                        <Input type="text" name="username" id="username" required/>
+                      </FormGroup>
+                      <FormGroup>
+                        <Label htmlFor="email">Email:</Label>
+                        <Input type="email" name="email" id="email" required/>
+                      </FormGroup>
+                      <FormGroup>
+                        <Label htmlFor="email_confirmation">Email confirmation:</Label>
+                        <Input type="email" name="email" id="email" required/>
+                      </FormGroup>
+                      <FormGroup>
+                        <Label htmlFor="password">Password:</Label>
+                        <Input type="password" name="password" id="password" required/>
+                      </FormGroup>
+                      <Button type="submit" className="btn btn-primary" block="true">Register</Button>
+                    </Form>
+                  </div>
+                </div>
+              </Card>
+            </Col>
+          </Row>
+        </div>
 
   );
   }
