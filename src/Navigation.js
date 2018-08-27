@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import './App.css';
-import PageComponent from './PageComponent';
 import {
   Collapse,
   Navbar,
@@ -11,7 +9,6 @@ import {
   NavItem,
   NavLink
  } from 'reactstrap';
-
 
 export default class App extends Component {
   constructor(props) {
@@ -37,10 +34,10 @@ export default class App extends Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
             <NavItem>
-              <NavLink className="mt-1"><Link to="/generate" activeClassName="active">Generate</Link></NavLink>
+              <NavLink className="mt-1" href="/gen">Generate</NavLink>
             </NavItem>
               <NavItem>
-                <NavLink className="mt-1" to="/" activeClassName="active"><Link to="/" activeClassName="active">Login</Link></NavLink>
+                <NavLink className="mt-1" href="/">Login</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="https://github.build.ge.com//Digital-CT-APS-WebServices/app-config-json" target="_blank"><i className="fab fa-github fa-2x"></i></NavLink>

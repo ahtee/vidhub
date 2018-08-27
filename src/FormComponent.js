@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Button, Col, Form, FormGroup, FormText, Label, Input } from 'reactstrap';
+import { Button, Form, FormGroup, FormText, Label, Input } from 'reactstrap';
 
 var data = {
     uai: "",
@@ -131,82 +131,82 @@ export default class FormComponent extends Component {
 
 
     return (
-      <Form row="true" onSubmit={this.handleSubmit} target="_blank">
+      <div className="container">
+        <Form row="true" onSubmit={this.handleSubmit} target="_blank">
 
-        <FormGroup className="mt-3 mr-sm-2 mb-sm-0">
-          <Label htmlFor="uai">Application UAI:</Label>
-          <Input type="text" name="uai" id="uai" pattern="^UAI[0-9]{5,7}" value={this.state.uai} onChange={this.handleChange} />
-          <FormText color="muted">
-            Input must start with <b>UAI</b> and include 5-7 numbers.
-          </FormText>
-        </FormGroup>
+          <FormGroup className="mt-3 mr-sm-2 mb-sm-0">
+            <Label htmlFor="uai">Application UAI:</Label>
+            <Input type="text" name="uai" id="uai" pattern="^UAI[0-9]{5,7}" value={this.state.uai} onChange={this.handleChange} />
+            <FormText color="muted">
+              Input must start with <b>UAI</b> and include 5-7 numbers.
+            </FormText>
+          </FormGroup>
 
-        <FormGroup className="mt-3 mr-sm-2 mb-sm-0">
-          <Label htmlFor="env">Environment:</Label>
-            <Input type="select" name="env" id="env" value={this.state.env} onChange={this.handleChange} required defaultValue="">
-              <option disabled value=""> -- Select an Environment -- </option>
-              <option value="dev">Development</option>
-              <option value="stg">Stage / Test</option>
-              <option value="prod">Production</option>
+          <FormGroup className="mt-3 mr-sm-2 mb-sm-0">
+            <Label htmlFor="env">Environment:</Label>
+              <Input type="select" name="env" id="env" value={this.state.env} onChange={this.handleChange} required defaultValue="">
+                <option disabled value=""> -- Select an Environment -- </option>
+                <option value="dev">Development</option>
+                <option value="stg">Stage / Test</option>
+                <option value="prod">Production</option>
+              </Input>
+          </FormGroup>
+
+          <FormGroup className="mt-3 mr-sm-2 mb-sm-0">
+            <Label htmlFor="app">Application Name:</Label>
+            <Input type="text" name="app" id="app" value={this.state.app} onChange={this.handleChange}/>
+            <FormText color="muted">
+              Enter the application name as it is shown in ServiceNow.
+            </FormText>
+          </FormGroup>
+
+          <FormGroup className="mt-3 mr-sm-2 mb-sm-0">
+            <Label for="filename">Deployment File:</Label>
+            <Input type="file" name="filename" id="filename"  value={this.state.filename} onChange={this.handleChange}/>
+            <FormText color="muted">
+              There is an upload file size limit of 10 Mb.
+            </FormText>
+          </FormGroup>
+
+          <FormGroup className="mt-3 mr-sm-2 mb-sm-0">
+            <Label for="source">Source:</Label>
+            <Input type="url" name="source" id="source" disabled placeholder="'https://s3.amazonaws.com/'\{this.state.app\}'/+ \{this.state.filename\}/sample.war'" value={this.state.source} onChange={this.handleChange}/>
+            <FormText color="muted">
+              Non-Editable field. Field only displays the Amazon Web Services S3 bucket location for your application.
+            </FormText>
+          </FormGroup>
+
+          <FormGroup className="mt-3 mr-sm-2 mb-sm-0">
+            <Label for="checksum">Checksum:</Label>
+            <Input type="password" name="checksum" id="checksum" value={this.state.source} onChange={this.handleChange}/>
+            <FormText color="muted">
+              Enter the 64-character checksum for the Applications deployment file.
+            </FormText>
+          </FormGroup>
+
+          <FormGroup className="mt-3 mr-sm-2 mb-sm-0">
+            <Label htmlFor="middleware">Environment:</Label>
+              <Input type="text" name="middleware" id="middleware" disabled onChange={this.handleChange} defaultValue="tomcat" />
+          </FormGroup>
+
+          <FormGroup className="mt-3 mr-sm-2 mb-sm-0">
+            <Label for="javaOpts">Config Java Opts</Label>
+            <Input type="select" name="javaOpts" id="javaOpts" multiple disabled defaultValue="['-Xms512m', '-Xmx512m', '-Dfile.encoding=UTF-8', '-Djava.security.egd=file:/dev/./urandom', '-Dsun.net.inetaddr.ttl=30', '-Djava.net.preferIPv4Stack=true', '-Djava.net.preferIPv4Addresses=true']">
+              {options.map((i) => {
+                return (<option value={i} key={i}>{i}</option>)
+              })}
             </Input>
-        </FormGroup>
+          </FormGroup>
 
-        <FormGroup className="mt-3 mr-sm-2 mb-sm-0">
-          <Label htmlFor="app">Application Name:</Label>
-          <Input type="text" name="app" id="app" value={this.state.app} onChange={this.handleChange}/>
-          <FormText color="muted">
-            Enter the application name as it is shown in ServiceNow.
-          </FormText>
-        </FormGroup>
+          <FormGroup className="mt-3 mr-sm-2 mb-sm-0">
+              <Button type="submit" value="Submit" className="btn btn-success mt-3" block="true">Submit</Button>
+          </FormGroup>
 
-        <FormGroup className="mt-3 mr-sm-2 mb-sm-0">
-          <Label for="filename">Deployment File:</Label>
-          <Input type="file" name="filename" id="filename"  value={this.state.filename} onChange={this.handleChange}/>
-          <FormText color="muted">
-            There is an upload file size limit of 10 Mb.
-          </FormText>
-        </FormGroup>
-
-        <FormGroup className="mt-3 mr-sm-2 mb-sm-0">
-          <Label for="source">Source:</Label>
-          <Input type="url" name="source" id="source" disabled placeholder="'https://s3.amazonaws.com/'\{this.state.app\}'/+ \{this.state.filename\}/sample.war'" value={this.state.source} onChange={this.handleChange}/>
-          <FormText color="muted">
-            Non-Editable field. Field only displays the Amazon Web Services S3 bucket location for your application.
-          </FormText>
-        </FormGroup>
-
-        <FormGroup className="mt-3 mr-sm-2 mb-sm-0">
-          <Label for="checksum">Checksum:</Label>
-          <Input type="password" name="checksum" id="checksum" value={this.state.source} onChange={this.handleChange}/>
-          <FormText color="muted">
-            Enter the 64-character checksum for the Applications deployment file.
-          </FormText>
-        </FormGroup>
-
-        <FormGroup className="mt-3 mr-sm-2 mb-sm-0">
-          <Label htmlFor="middleware">Environment:</Label>
-            <Input type="text" name="middleware" id="middleware" disabled onChange={this.handleChange} defaultValue="tomcat" />
-        </FormGroup>
-
-        <FormGroup className="mt-3 mr-sm-2 mb-sm-0">
-          <Label for="javaOpts">Config Java Opts</Label>
-          <Input type="select" name="javaOpts" id="javaOpts" multiple disabled defaultValue="['-Xms512m', '-Xmx512m', '-Dfile.encoding=UTF-8', '-Djava.security.egd=file:/dev/./urandom', '-Dsun.net.inetaddr.ttl=30', '-Djava.net.preferIPv4Stack=true', '-Djava.net.preferIPv4Addresses=true']">
-            {options.map((i) => {
-              return (<option value={i} key={i}>{i}</option>)
-            })}
-          </Input>
-        </FormGroup>
-
-        <FormGroup className="mt-3 mr-sm-2 mb-sm-0">
-            <Button type="submit" value="Submit" className="btn btn-success mt-3" block="true">Submit</Button>
-        </FormGroup>
-
-        <div className="mt-3 mx-auto container res-block" md="6">
-          <pre>{res}</pre>
-        </div>
-      </Form>
-
-
+          <div className="mt-3 mx-auto container res-block" md="6">
+            <pre>{res}</pre>
+          </div>
+        </Form>
+      </div>
     );
   }
 }

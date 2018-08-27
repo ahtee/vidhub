@@ -4,7 +4,7 @@
 
 Allowing customers to generate their application config file for Middleware (Tomcat) to integrate with a Chef Cookbook.
 
-
+![screenshot.jpg](./docs/screenshot.JPG)
 
 ## Getting started
 
