@@ -1,4 +1,4 @@
-# :shipit: VidHub
+# :rocket: VidHub
 
 VidHub is a video sharing website.
 
@@ -12,33 +12,6 @@ Coming soon!
 Clone the repo to your local machine
 ```
 git clone https://github.com/ahtee/vidhub.git
-```
-
-It will create a directory called **vidhub** inside the current folder.
-Inside that directory, it will have the initial project structure and other application files and install the transitive dependencies:
-
-```
-app-config-json
-├── README.md
-├── node_modules/
-├── package.json
-├── package-lock.json
-├── .gitignore
-├── public
-│   ├── favicon.ico
-│   ├── index.html
-│   └── manifest.json
-└── src
-    ├── App.css
-    ├── App.js
-    ├── App.test.js
-    ├── index.css
-    ├── index.js
-    ├── logo.svg
-    ├── Navigation.css
-    ├── Navigation.js
-    ├── Navigation.test.js
-    └── registerServiceWorker.js
 ```
 
 ### Running locally
