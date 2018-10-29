@@ -1,4 +1,4 @@
-# :rocket: VidHub
+# :rocket: ViewHub
 
 VidHub is a video sharing website.
 
