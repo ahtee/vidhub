@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import logo from './VidHub.JPG';
 import { Button, Form, FormGroup, Label, Input, Card, Row, Col } from 'reactstrap';
 
 export default class Login extends Component {
@@ -10,7 +11,7 @@ export default class Login extends Component {
         <div className="container mt-5">
           <Row>
             <Col sm={7} className="pull-left">
-              <h1 className="display-3">Generate JSON</h1>
+              <h1 className="display-3"><img src={logo} alt="logo" /></h1>
               <p className="lead">This is a simple hero unit, a simple Jumbotron-style component for calling extra attention to featured content or information.</p>
               <hr className="mt-2" />
               <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
@@ -22,38 +23,14 @@ export default class Login extends Component {
               <Card body className="login-max-width">
                 <ul class="nav nav-tabs">
                   <li class="nav-item">
-                    <a class="nav-link active" href="#ldapldap" data-toggle="tab" aria-expanded="true">LDAP</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#login-pane" data-toggle="tab" aria-expanded="false">Standard</a>
+                    <a class="nav-link active" href="#login-pane" data-toggle="tab" aria-expanded="false">Login</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#register-pane" data-toggle="tab" aria-expanded="false">Register</a>
                   </li>
                 </ul>
                 <div className="tab-content mt-3">
-                  <div className="active login-box tab-pane" id="ldapldap" role="tabpanel">
-                    <Form>
-                      <FormGroup>
-                        <Label htmlFor="user-email">LDAP Username:</Label>
-                        <Input type="text" name="ldap-username" id="ldap-username" required/>
-                      </FormGroup>
-                      <FormGroup>
-                        <Label htmlFor="user-password">Password</Label>
-                        <Input type="password" name="user-password" id="user-password" required/>
-                      </FormGroup>
-                      <div class="remember-me checkbox">
-                        <FormGroup className="ml-4">
-                          <Label htmlFor="remember">
-                            <Input type="checkbox" name="remember" id="remember" value="0" />
-                            <span>Remember me</span>
-                          </Label>
-                        </FormGroup>
-                      </div>
-                      <Button type="submit" className="btn btn-success" block="true">Sign In</Button>
-                    </Form>
-                  </div>
-                  <div className="login-box tab-pane" id="login-pane" role="tabpanel">
+                  <div className="active login-box tab-pane" id="login-pane" role="tabpanel">
                     <Form>
                       <FormGroup>
                         <Label htmlFor="user-email">Username or email:</Label>
