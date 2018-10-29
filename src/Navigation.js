@@ -2,13 +2,18 @@ import React, { Component } from 'react';
 import './App.css';
 import logo from './VidHub.JPG';
 import {
+  Button,
   Collapse,
   Navbar,
   NavbarToggler,
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink
+  NavLink,
+  Form,
+  FormGroup,
+  Label,
+  Input
  } from 'reactstrap';
 
 export default class App extends Component {
@@ -30,7 +35,8 @@ export default class App extends Component {
   render() {
     return (
         <Navbar color="dark" dark expand="md">
-          <NavbarBrand><img src={logo} alt="logo" class="logo" height="50"/></NavbarBrand>
+          <NavbarBrand><img src={logo} alt="logo" class="logo" height="40"/></NavbarBrand>
+          
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>

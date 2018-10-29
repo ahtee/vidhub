@@ -12,3 +12,12 @@ body {
 .login-max-width {
   max-width: 500px;
 }
+
+.search-style {
+  background-color: #495057;
+}
+
+.navigation-search {
+  position: relative;
+  left: -50px;
+}
