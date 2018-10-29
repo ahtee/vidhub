@@ -1,22 +1,20 @@
-# :shipit: JSON Config Generator Application :shipit:
+# :shipit: VidHub
 
-Allowing customers to generate their application config file for Middleware (Tomcat) to integrate with a Chef Cookbook. Built in ReactJS and using the Facebook react boilerplate.
+VidHub is a video sharing website.
 
 ---
 ## App Screenshots
 
-![intro.jpg](./docs/intro.jpg)
----
-![screenshot.jpg](./docs/screenshot.JPG)
+Coming soon!
 
 ## Getting started
 
 Clone the repo to your local machine
 ```
-git clone git@github.build.ge.com:Digital-CT-APS-WebServices/app-config-json-react.git
+git clone https://github.com/ahtee/vidhub.git
 ```
 
-It will create a directory called **app-config-json** inside the current folder.
+It will create a directory called **vidhub** inside the current folder.
 Inside that directory, it will have the initial project structure and other application files and install the transitive dependencies:
 
 ```
@@ -45,7 +43,7 @@ app-config-json
 
 ### Running locally
 
-Change to your cloned directory `cd app-config-json`
+Change to your cloned directory `cd vidhub`
 
 Install the dependencies with yarn or npm
 ```

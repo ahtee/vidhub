@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import logo from './VidHub.JPG';
 import {
   Collapse,
   Navbar,
@@ -29,7 +30,7 @@ export default class App extends Component {
   render() {
     return (
         <Navbar color="dark" dark expand="md">
-          <NavbarBrand className="text-white">Generate JSON</NavbarBrand>
+          <NavbarBrand><img src={logo} alt="logo" class="logo" height="50"/></NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
@@ -37,7 +38,7 @@ export default class App extends Component {
               <NavLink className="mt-1" activeClassName="active" href="/gen" exact>Generate</NavLink>
             </NavItem>
               <NavItem>
-                <NavLink className="mt-1" activeClassName="active" href="/" exact>Login</NavLink>
+                <NavLink activeClassName="active" href="/" exact><i class="fas fa-user-circle fa-2x"></i></NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="https://github.build.ge.com//Digital-CT-APS-WebServices/app-config-json" target="_blank"><i className="fab fa-github fa-2x"></i></NavLink>
