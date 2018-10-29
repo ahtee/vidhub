@@ -21,3 +21,11 @@ body {
   position: relative;
   left: -50px;
 }
+
+.dropdown-menu {
+  width: 250px;
+}
+
+.nav-user-login {
+  border-radius: 50%;
+}
