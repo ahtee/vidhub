@@ -47,7 +47,7 @@ export default class App extends Component {
                 <NavLink activeClassName="active" href="/" exact><i class="fas fa-user-circle fa-2x"></i></NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.build.ge.com//Digital-CT-APS-WebServices/app-config-json" target="_blank"><i className="fab fa-github fa-2x"></i></NavLink>
+                <NavLink href="https://github.com/ahtee/vidhub" target="_blank"><i className="fab fa-github fa-2x"></i></NavLink>
               </NavItem>
             </Nav>
           </Collapse>
