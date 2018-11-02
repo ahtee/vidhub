@@ -85,6 +85,6 @@ export default class Login extends Component {
           </Row>
         </div>
 
-  );
+    );
   }
 }

@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Navigation from './Navigation';
 import Login from './Login';
-import FormComponent from './FormComponent';
+import Discover from './Discover';
 
 export default class App extends Component {
   render() {
@@ -13,7 +13,7 @@ export default class App extends Component {
           <Navigation />
           <Switch>
             <Route exact path="/" component={Login} />
-            <Route path="/gen" component={FormComponent} />
+            <Route path="/discover" component={Discover} />
           </Switch>
         </div>
       </BrowserRouter>
