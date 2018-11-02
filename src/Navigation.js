@@ -63,7 +63,7 @@ export default class App extends Component {
               <a className="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <img src={user} className="nav-user-login" alt="Log In" width="30" height="30" />
               </a>
-              <div className="dropdown-menu p-3" aria-labelledby="navbarDropdown">
+              <div className="dropdown-menu dropdown-menu-right p-3" aria-labelledby="navbarDropdown">
                 <Form>
                   <FormGroup>
                     <Label htmlFor="user-email">Username or email:</Label>
@@ -87,12 +87,6 @@ export default class App extends Component {
                   <Button type="submit" className="btn btn-success" block="true">Sign In</Button>
                 </Form>
               </div>
-            </li>
-            <li className="nav-item active">
-              <a className="nav-link" href="/">Trending <span className="sr-only">(current)</span></a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/">Discover</a>
             </li>
           </ul>
         </div>
