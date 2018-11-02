@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/ahtee/viewhub/tree/master.svg?style=svg)](https://circleci.com/gh/ahtee/viewhub/tree/master)
+
 # :rocket: ViewHub
 
 VidHub is a video sharing website.
