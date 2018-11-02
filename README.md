@@ -1,4 +1,4 @@
-[![CircleCI]((https://circleci.com/gh/ahtee/mozart-web.svg?style=shield))](https://circleci.com/gh/ahtee/viewhub/tree/master)
+[![CircleCI](https://circleci.com/gh/ahtee/viewhub/tree/master.svg?style=shield)](https://circleci.com/gh/ahtee/viewhub/tree/master)
 
 # :rocket: ViewHub
 
