@@ -21,12 +21,12 @@ export default class Login extends Component {
             </Col>
             <Col sm={5} className="pull-right">
               <Card body className="login-max-width">
-                <ul class="nav nav-tabs">
-                  <li class="nav-item">
-                    <a class="nav-link active" href="#login-pane" data-toggle="tab" aria-expanded="false">Login</a>
+                <ul className="nav nav-tabs">
+                  <li className="nav-item">
+                    <a className="nav-link active" href="#login-pane" data-toggle="tab" aria-expanded="false">Login</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#register-pane" data-toggle="tab" aria-expanded="false">Register</a>
+                  <li className="nav-item">
+                    <a className="nav-link" href="#register-pane" data-toggle="tab" aria-expanded="false">Register</a>
                   </li>
                 </ul>
                 <div className="tab-content mt-3">

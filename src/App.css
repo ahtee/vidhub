@@ -29,3 +29,7 @@ body {
 .nav-user-login {
   border-radius: 50%;
 }
+
+.card-margin {
+  margin-bottom: -25px;
+}

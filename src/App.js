@@ -4,6 +4,7 @@ import './App.css';
 import Navigation from './Navigation';
 import Login from './Login';
 import Discover from './Discover';
+import Trending from './Trending';
 
 export default class App extends Component {
   render() {
@@ -14,6 +15,7 @@ export default class App extends Component {
           <Switch>
             <Route exact path="/" component={Login} />
             <Route path="/discover" component={Discover} />
+            <Route path="/trending" component={Trending} />
           </Switch>
         </div>
       </BrowserRouter>

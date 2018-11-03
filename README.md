@@ -1,8 +1,8 @@
 [![CircleCI](https://circleci.com/gh/ahtee/viewhub/tree/master.svg?style=shield)](https://circleci.com/gh/ahtee/viewhub/tree/master)
 
-# :rocket: ViewHub
+# :rocket: ViewHub/VidHub
 
-VidHub is a video sharing website.
+ViewHub is a video sharing website.
 
 ---
 ## App Screenshots

@@ -4,7 +4,7 @@ import logo from './VidHub.JPG';
 import user from './default-user.png';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
-export default class App extends Component {
+export default class Navigation extends Component {
   constructor(props) {
     super(props);
 
@@ -33,7 +33,7 @@ export default class App extends Component {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav d-flex pl-2 pr-2 flex-items-center text-bold list-style-none">
                 <li className="nav-item active">
-                  <a className="nav-link" href="/">Trending <span className="sr-only">(current)</span></a>
+                  <a className="nav-link" href="/trending">Trending <span className="sr-only">(current)</span></a>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link" href="/discover">Discover</a>
@@ -46,7 +46,7 @@ export default class App extends Component {
                     <a className="dropdown-item" href="/">Games</a>
                     <a className="dropdown-item" href="/">Vlogs</a>
                     <div className="dropdown-divider"></div>
-                    <a className="dropdown-item" href="/">Code</a>
+                    <a className="dropdown-item" href="/">Coders</a>
                   </div>
                 </li>
               </ul>
@@ -73,7 +73,7 @@ export default class App extends Component {
                     <Label htmlFor="user-password">Password</Label>
                     <Input type="password" name="user-password" id="user-password" required/>
                   </FormGroup>
-                  <div class="remember-me checkbox">
+                  <div className="remember-me checkbox">
                     <FormGroup className="ml-4">
                       <Label htmlFor="remember">
                         <Input type="checkbox" name="remember" id="remember" value="0" />
