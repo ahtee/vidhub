@@ -39,8 +39,4 @@ Open http://localhost:3000 to view it in the browser.
 
 ## Wishlist
 
-- [x] Add GitLab-style login
-- [x] Add React Routing
-- [ ] Receive final JSON model to fill
-- [ ] Implement form to populate JSON
-- [ ] Output JSON to a new tab on clicking Submit
+Check the projects tab for features yet to be created. All features on the site need backend hooks.
