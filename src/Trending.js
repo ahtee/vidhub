@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 export default class Trending extends Component {
-//   constructor(props) {
 
-//   }
   render() {
     return (
 

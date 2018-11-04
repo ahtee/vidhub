@@ -46,7 +46,7 @@ export default class Login extends Component {
                             <Input type="checkbox" name="remember" id="remember" value="0" />
                             <span className="pull-left">Remember me</span>
                             <div className="pull-right forgot-password">
-                              <a href="/">Forgot your password?</a>
+                              <a href="/forgot">Forgot your password?</a>
                             </div>
                           </Label>
                         </FormGroup>
@@ -76,6 +76,14 @@ export default class Login extends Component {
                         <Label htmlFor="password">Password:</Label>
                         <Input type="password" name="password" id="password" required/>
                       </FormGroup>
+                      <div className="terms-and-conditions checkbox mt-3">
+                        <FormGroup className="ml-4">
+                          <Label htmlFor="terms-and-conditions">
+                            <Input type="checkbox" name="terms-and-conditions" id="terms-and-conditions" value="0" required />
+                            <span>I have read and agree to the <a href="/">Terms and Conditions</a></span>
+                          </Label>
+                        </FormGroup>
+                      </div>
                       <Button type="submit" className="btn btn-primary" block="true">Register</Button>
                     </Form>
                   </div>
