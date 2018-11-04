@@ -33,3 +33,11 @@ body {
 .card-margin {
   margin-bottom: -25px;
 }
+
+.main-search-input {
+  border: 0;
+  box-shadow: none;
+  font-size: inherit;
+  background: none;
+  border-radius: 50%;
+}

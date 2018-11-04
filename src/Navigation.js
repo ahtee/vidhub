@@ -53,7 +53,7 @@ export default class Navigation extends Component {
             </div>
           </div>
           <form className="form-inline my-2 my-lg-0">
-            <input className="form-control mr-sm-2" type="search" placeholder="Search videos/streams..." aria-label="Search" />
+            <input className="form-control main-search-input mr-sm-2" type="search" placeholder="Search videos/streams..." aria-label="Search" />
             <input className="btn btn-outline-success my-2 my-sm-0" type="hidden" />
           </form>
         </div>
@@ -77,9 +77,12 @@ export default class Navigation extends Component {
                     <FormGroup className="ml-4">
                       <Label htmlFor="remember">
                         <Input type="checkbox" name="remember" id="remember" value="0" />
-                        <span className="pull-left">Remember me</span>
-                        <div className="pull-right forgot-password">
-                          <a href="/">Forgot your password?</a>
+                        <span>Remember me</span>
+                        <div className="forgot-password">
+                          <a href="/forgot">Forgot your password?</a>
+                        </div>
+                        <div className="register">
+                          <a href="/register">Register</a>
                         </div>
                       </Label>
                     </FormGroup>
