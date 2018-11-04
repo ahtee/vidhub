@@ -76,18 +76,17 @@ export default class Navigation extends Component {
                   <div className="remember-me checkbox">
                     <FormGroup className="ml-4">
                       <Label htmlFor="remember">
-                        <Input type="checkbox" name="remember" id="remember" value="0" />
-                        <span>Remember me</span>
-                        <div className="forgot-password">
-                          <a href="/forgot">Forgot your password?</a>
-                        </div>
-                        <div className="register">
-                          <a href="/register">Register</a>
-                        </div>
+                        <Input type="checkbox" name="remember" id="remember" value="0" /><span>Remember me</span>
                       </Label>
                     </FormGroup>
                   </div>
                   <Button type="submit" className="btn btn-success" block="true">Sign In</Button>
+                  <div className="forgot-password">
+                    <a href="/forgot">Forgot password?</a>
+                  </div>
+                  <div className="register">
+                    <a href="/register">Sign Up</a>
+                  </div>
                 </Form>
               </div>
             </li>
