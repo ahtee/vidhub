@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import './App.css';
 import logo from './VidHub.JPG';
 import { Button, Form, FormGroup, Label, Input, Card, Row, Col } from 'reactstrap';
+import Footer from './Footer';
 
 export default class Login extends Component {
 
   render() {
     return (
-
+      <div>
         <div className="container mt-5">
           <Row>
             <Col sm={7} className="pull-left">
@@ -92,7 +93,8 @@ export default class Login extends Component {
             </Col>
           </Row>
         </div>
-
+        <Footer />
+      </div>
     );
   }
 }

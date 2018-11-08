@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import Footer from './Footer';
 
 export default class Discover extends Component {
 
@@ -36,59 +37,60 @@ export default class Discover extends Component {
                     </div>
                 </div>
             </div>
-        <div className="container">
-            <div className="row topic-heat mt-4 ml-2">
-                <h3>Top Clips :scissors:</h3>
+            <div className="container">
+                <div className="row topic-heat mt-4 ml-2">
+                    <h3>Top Clips :scissors:</h3>
+                </div>
+                <div className="row justify-content-center mb-3 mt-4 mb-5">
+                    <div className="col-sm-2">
+                        <div className="card">
+                            <img src="//placehold.it/210x140" className="tn-trending" alt="clip-description"/>
+                            <div className="card-body card-margin">
+                                <h5 className="card-title">Card title</h5>
+                                <p className="text-muted float-left">ChannelName</p><p className="text-muted float-right"><i className="fas fa-eye"></i> count</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-sm-2">
+                        <div className="card">
+                            <img src="//placehold.it/210x140" className="tn-trending" alt="clip-description"/>
+                            <div className="card-body card-margin">
+                                <h5 className="card-title">Card title</h5>
+                                <p className="text-muted float-left">ChannelName</p><p className="text-muted float-right"><i className="fas fa-eye"></i> count</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-sm-2">
+                        <div className="card">
+                            <img src="//placehold.it/210x140" className="tn-trending" alt="clip-description"/>
+                            <div className="card-body card-margin">
+                                <h5 className="card-title">Card title</h5>
+                                <p className="text-muted float-left">ChannelName</p><p className="text-muted float-right"><i className="fas fa-eye"></i> count</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-sm-2">
+                        <div className="card">
+                            <img src="//placehold.it/210x140" className="tn-trending" alt="clip-description"/>
+                            <div className="card-body card-margin">
+                                <h5 className="card-title">Card title</h5>
+                                <p className="text-muted float-left">ChannelName</p><p className="text-muted float-right"><i className="fas fa-eye"></i> count</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-sm-2">
+                        <div className="card">
+                            <img src="//placehold.it/210x140" className="tn-trending" alt="clip-description"/>
+                            <div className="card-body card-margin">
+                                <h5 className="card-title">Card title</h5>
+                                <p className="text-muted float-left">ChannelName</p><p className="text-muted float-right"><i className="fas fa-eye"></i> count</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div className="row justify-content-center mb-3 mt-4 mb-5">
-                <div className="col-sm-2">
-                    <div className="card">
-                        <img src="//placehold.it/210x140" className="tn-trending" alt="clip-description"/>
-                        <div className="card-body card-margin">
-                            <h5 className="card-title">Card title</h5>
-                            <p className="text-muted float-left">ChannelName</p><p className="text-muted float-right"><i className="fas fa-eye"></i> count</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-sm-2">
-                    <div className="card">
-                        <img src="//placehold.it/210x140" className="tn-trending" alt="clip-description"/>
-                        <div className="card-body card-margin">
-                            <h5 className="card-title">Card title</h5>
-                            <p className="text-muted float-left">ChannelName</p><p className="text-muted float-right"><i className="fas fa-eye"></i> count</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-sm-2">
-                    <div className="card">
-                        <img src="//placehold.it/210x140" className="tn-trending" alt="clip-description"/>
-                        <div className="card-body card-margin">
-                            <h5 className="card-title">Card title</h5>
-                            <p className="text-muted float-left">ChannelName</p><p className="text-muted float-right"><i className="fas fa-eye"></i> count</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-sm-2">
-                    <div className="card">
-                        <img src="//placehold.it/210x140" className="tn-trending" alt="clip-description"/>
-                        <div className="card-body card-margin">
-                            <h5 className="card-title">Card title</h5>
-                            <p className="text-muted float-left">ChannelName</p><p className="text-muted float-right"><i className="fas fa-eye"></i> count</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-sm-2">
-                    <div className="card">
-                        <img src="//placehold.it/210x140" className="tn-trending" alt="clip-description"/>
-                        <div className="card-body card-margin">
-                            <h5 className="card-title">Card title</h5>
-                            <p className="text-muted float-left">ChannelName</p><p className="text-muted float-right"><i className="fas fa-eye"></i> count</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <Footer />
         </div>
-    </div>
     );
   }
 }
