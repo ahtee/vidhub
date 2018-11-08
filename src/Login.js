@@ -51,7 +51,7 @@ export default class Login extends Component {
                           </Label>
                         </FormGroup>
                       </div>
-                      <Button type="submit" className="btn btn-success" block="true">Sign In</Button>
+                      <Button type="submit" className="btn btn-success" block>Sign In</Button>
                     </Form>
                   </div>
                   <div className="login-box tab-pane" id="register-pane" role="tabpanel">
@@ -84,7 +84,7 @@ export default class Login extends Component {
                           </Label>
                         </FormGroup>
                       </div>
-                      <Button type="submit" className="btn btn-primary" block="true">Register</Button>
+                      <Button type="submit" className="btn btn-primary" block>Register</Button>
                     </Form>
                   </div>
                 </div>

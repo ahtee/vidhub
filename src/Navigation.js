@@ -80,7 +80,7 @@ export default class Navigation extends Component {
                       </Label>
                     </FormGroup>
                   </div>
-                  <Button type="submit" className="btn btn-success" block="true">Sign In</Button>
+                  <Button type="submit" className="btn btn-success" block>Sign In</Button>
                   <div className="forgot-password">
                     <a href="/forgot">Forgot password?</a>
                   </div>
