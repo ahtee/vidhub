@@ -26,11 +26,11 @@ export default class Discover extends Component {
                             <iframe className="d-block carousel-discover-video mx-auto mt-4" width="560" height="315" src="https://www.youtube.com/embed/MXiopMXJADg?controls=0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="title3"></iframe>
                             </div>
                         </div>
-                        <a className="carousel-control-prev" href="#carouselIndicator" role="button" data-slide="prev">
+                        <a className="carousel-control-prev" href="#carouselDiscover" role="button" data-slide="prev">
                             <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span className="sr-only">Previous</span>
                         </a>
-                        <a className="carousel-control-next" href="#carouselExampleIndicator" role="button" data-slide="next">
+                        <a className="carousel-control-next" href="#carouselDiscover" role="button" data-slide="next">
                             <span className="carousel-control-next-icon" aria-hidden="true"></span>
                             <span className="sr-only">Next</span>
                         </a>
