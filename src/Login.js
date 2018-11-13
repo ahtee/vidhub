@@ -8,7 +8,7 @@ export default class Login extends Component {
   render() {
     return (
       <div>
-        <div className="container">
+        <div className="container mt-5">
           <Row>
             <Col sm={7} className="pull-left">
               <h1 className="display-3"><img src={logo} alt="logo" height="200"/></h1>
@@ -92,11 +92,6 @@ export default class Login extends Component {
             </Col>
           </Row>
         </div>
-<<<<<<< HEAD
-=======
-        <br />
-        <Footer />
->>>>>>> 82ff6012bbe14dbec8bfdfe82a47344c9a0c3d99
       </div>
     );
   }
