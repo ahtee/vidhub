@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "VidHub video sharing website",
+  "name": "VidHub. A Place to Share.",
   "icons": [
     {
       "src": "favicon.ico",

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import logo from './VidHub.JPG';
 import { Button, Form, FormGroup, Label, Input, Card, Row, Col } from 'reactstrap';
-import Footer from './Footer';
 
 export default class Login extends Component {
 
@@ -93,7 +92,6 @@ export default class Login extends Component {
             </Col>
           </Row>
         </div>
-        <Footer />
       </div>
     );
   }
