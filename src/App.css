@@ -55,3 +55,9 @@ body {
   background: #033500;
   color: #d3d3d3;
 }
+
+.user-badge-danger-notification {
+  position: relative;
+  top: -13px;
+  left: -13px;
+}
