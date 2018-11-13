@@ -11,9 +11,9 @@ export default class Discover extends Component {
                 <div className="col-12">
                     <div id="carouselDiscover" className="carousel slide" data-ride="carousel">
                         <ol className="carousel-indicators">
-                            <li data-target="#carouselDiscover" data-slide-to="0" className="active"></li>
-                            <li data-target="#carouselDiscover" data-slide-to="1"></li>
-                            <li data-target="#carouselDiscover" data-slide-to="2"></li>
+                            <li data-target="#carouselDiscover" data-slide-to="0" className="active indicator-color"></li>
+                            <li data-target="#carouselDiscover" data-slide-to="1" className="indicator-color"></li>
+                            <li data-target="#carouselDiscover" data-slide-to="2" className="indicator-color"></li>
                         </ol>
                         <div className="carousel-inner">
                             <div className="carousel-item active">
