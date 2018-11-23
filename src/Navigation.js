@@ -43,7 +43,7 @@ export default class Navigation extends Component {
                     Live
                   </a>
                   <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a className="dropdown-item" href="/">Games</a>
+                    <a className="dropdown-item" href="/games">Games</a>
                     <a className="dropdown-item" href="/">Vlogs</a>
                     <div className="dropdown-divider"></div>
                     <a className="dropdown-item" href="/">Coders</a>
@@ -58,6 +58,12 @@ export default class Navigation extends Component {
           </form>
         </div>
         <div className="d-flex justify-content-end ml-auto">
+          <label className="switch pr-2 mt-2">
+          <i class="fas fa-sun"></i>
+            <input type="checkbox" />
+            <span className="slider round"></span>
+          </label>
+          
           <ul className="navbar-nav d-flex pl-2 pr-2 flex-items-center text-bold list-style-none">
             <li className="nav-item dropdown">
               <a className="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

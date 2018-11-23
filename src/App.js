@@ -7,6 +7,7 @@ import Discover from './Discover';
 import Trending from './Trending';
 import Register from './Register';
 import Forgot from './Forgot';
+import Games from './Games';
 
 export default class App extends Component {
   render() {
@@ -21,6 +22,7 @@ export default class App extends Component {
             <Route path="/trending" component={Trending} />
             <Route path="/register" component={Register} />
             <Route path="/forgot" component={Forgot} />
+            <Route path="/games" component={Games} />
           </Switch>
         </div>
       </BrowserRouter>
