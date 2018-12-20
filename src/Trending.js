@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Footer from './Footer';
+// import Footer from './Footer';
 
 export default class Trending extends Component {
 
@@ -166,9 +166,7 @@ export default class Trending extends Component {
                 </div>
                 <hr />
             </div>
-            <Footer />
         </div>
-
     );
   }
 }

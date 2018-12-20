@@ -130,3 +130,23 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
+/* Login Page SVG */
+svg {
+  height: 100px;
+  position:absolute;
+  bottom:0;
+  width:100%;
+}
+
+@media (max-width: 699px) {
+  .svg--lg {
+    display: none;
+  }
+}
+
+@media (min-width: 700px) {
+  .svg--sm {
+    display: none;
+  }
+} 
