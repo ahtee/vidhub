@@ -7,7 +7,7 @@
 ---
 ## App Screenshots
 
-Coming soon!
+![](./.github/vidhub.gif)
 
 ## Getting started
 
