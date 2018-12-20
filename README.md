@@ -1,8 +1,8 @@
 [![CircleCI](https://circleci.com/gh/ahtee/viewhub/tree/master.svg?style=shield)](https://circleci.com/gh/ahtee/viewhub/tree/master)
 
-# :rocket: ViewHub/VidHub
+# :rocket: VidHub :camera: :eyes:
 
-ViewHub is a video sharing website.
+VidHub is a video sharing website.
 
 ---
 ## App Screenshots
@@ -10,6 +10,8 @@ ViewHub is a video sharing website.
 Coming soon!
 
 ## Getting started
+
+VidHub is built with React on the front-end. Backend is still to-be-developed. Feel free to contribute or offer suggestions on how to improve the platform.
 
 Clone the repo to your local machine
 ```
