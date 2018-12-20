@@ -2,7 +2,7 @@
 
 # :rocket: VidHub :camera: :eyes:
 
-VidHub is a video sharing website.
+[VidHub](https://vidhub.org) is a video sharing website.
 
 ---
 ## App Screenshots
@@ -11,7 +11,7 @@ Coming soon!
 
 ## Getting started
 
-VidHub is built with React on the front-end. Backend is still to-be-developed. Feel free to contribute or offer suggestions on how to improve the platform.
+VidHub is built with React on the front-end. Backend is still to-be-developed, possibly Rails. Open to contributions or suggestions on how to improve the platform. Looking to utilize AWS and services like Lambda, Elastic Transcoder, Aurora and/or DynamoDB.
 
 Clone the repo to your local machine
 ```
