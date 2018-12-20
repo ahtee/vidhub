@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 import './App.css';
 import logo from './VidHub.JPG';
 import user from './default-user.png';
@@ -21,6 +22,7 @@ export default class Navigation extends Component {
   }
 
   render() {
+
     return (
 
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -32,22 +34,20 @@ export default class Navigation extends Component {
             <a className="navbar-brand" href="/"><img src={logo} alt="VidHub" height="40"/></a>
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav d-flex pl-2 pr-2 flex-items-center text-bold list-style-none">
-                <li className="nav-item active">
-                  <a className="nav-link" href="/trending">Trending <span className="sr-only">(current)</span></a>
+                <li className="nav-item">
+                  <Link to="/trending" className="nav-link" activeClassName="active">Trending <span className="sr-only">(current)</span></Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/discover">Discover</a>
+                  <Link to="/discover" className="nav-link" activeClassName="active">Discover</Link>
                 </li>
-                <li className="nav-item dropdown">
-                  <a className="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Live
-                  </a>
-                  <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a className="dropdown-item" href="/games">Games</a>
-                    <a className="dropdown-item" href="/">Vlogs</a>
-                    <div className="dropdown-divider"></div>
-                    <a className="dropdown-item" href="/">Coders</a>
-                  </div>
+                <li className="nav-item">
+                  <Link to="/" className="nav-link" activeClassName="active">Categories</Link>
+                </li>
+                <li className="nav-item">
+                  <Link to="/games" className="nav-link" activeClassName="active">Games</Link>
+                </li>
+                <li className="nav-item">
+                  <Link to="/" className="nav-link" activeClassName="active">Live</Link>
                 </li>
               </ul>
             </div>

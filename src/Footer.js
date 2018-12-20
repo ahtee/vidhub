@@ -8,7 +8,7 @@ export default class Footer extends Component {
     return (
         <div className="vidhub-footer">
             <div className="container">
-                <div className="row mt-5">
+                <div className="row">
                     <div className="col-3">
                         <ul>
                             <li>About VidHub</li>
