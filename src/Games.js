@@ -4,6 +4,7 @@ import './App.css';
 export default class Games extends Component {
 
   render() {
+      
     return (
         <div>
             <div className="d-flex flex-row flex-wrap bd-highlight justify-content-around mb-1">

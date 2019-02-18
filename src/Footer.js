@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 
 export default class Footer extends Component {
-  
-
   render() {
+    
     return (
         <div className="vidhub-footer">
             <div className="container">
@@ -35,8 +34,7 @@ export default class Footer extends Component {
                     </div>
                 </div>
             </div>
-        </div>
-        
+        </div> 
     );
   }
 }

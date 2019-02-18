@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import Footer from './Footer';
 
 export default class Discover extends Component {
 
@@ -89,7 +88,6 @@ export default class Discover extends Component {
                     </div>
                 </div>
             </div>
-            <Footer />
         </div>
     );
   }
