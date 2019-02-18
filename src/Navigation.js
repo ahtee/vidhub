@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import './App.css';
 import logo from './VidHub.JPG';
 import user from './default-user.png';
-import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import { Button, Form, FormGroup, InputGroup } from 'react-bootstrap';
 
 export default class Navigation extends Component {
   constructor(props) {
@@ -24,7 +24,6 @@ export default class Navigation extends Component {
   render() {
 
     return (
-
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="d-flex flex-justify-between flex-auto">
           <div className="d-flex">
@@ -72,18 +71,18 @@ export default class Navigation extends Component {
               <div className="dropdown-menu dropdown-menu-right p-3" aria-labelledby="navbarDropdown">
                 <Form>
                   <FormGroup>
-                    <Label htmlFor="user-email">Username or email:</Label>
-                    <Input type="email" name="user-email" id="user-email" required/>
+                    <Form.Label htmlFor="user-email">Username or email:</Form.Label>
+                    <InputGroup.Email type="email" name="user-email" id="user-email" required/>
                   </FormGroup>
                   <FormGroup>
-                    <Label htmlFor="user-password">Password</Label>
-                    <Input type="password" name="user-password" id="user-password" required/>
+                    <Form.Label htmlFor="user-password">Password</Form.Label>
+                    <InputGroup.Password type="password" name="user-password" id="user-password" required/>
                   </FormGroup>
                   <div className="remember-me checkbox">
                     <FormGroup className="ml-4">
-                      <Label htmlFor="remember">
-                        <Input type="checkbox" name="remember" id="remember" value="0" /><span>Remember me</span>
-                      </Label>
+                      <Form.Label htmlFor="remember">
+                        <InputGroup.Checkbox type="checkbox" name="remember" id="remember" value="0" /><span>Remember me</span>
+                      </Form.Label>
                     </FormGroup>
                   </div>
                   <Button type="submit" className="btn btn-success" block>Sign In</Button>
@@ -98,8 +97,7 @@ export default class Navigation extends Component {
             </li>
           </ul>
         </div>
-      </nav> 
-        
+      </nav>
     );
   }
 }

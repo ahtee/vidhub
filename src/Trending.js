@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-// import Footer from './Footer';
 
 export default class Trending extends Component {
 
