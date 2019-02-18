@@ -13,15 +13,25 @@
   },
   "devDependencies": {
     "bootstrap": "^4.3.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-loader": "^2.1.2",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "jquery": "^1.9.1",
     "react": "^16.8.2",
     "react-bootstrap": "^1.0.0-beta.5",
     "react-dom": "^16.8.2",
-    "react-router-dom": "^4.3.1"
+    "react-router-dom": "^4.3.1",
+    "typescript": "^3.3.3"
   },
   "browserslist": [
     ">0.2%",
     "not dead",
     "not ie <= 11",
     "not op_mini all"
+  ],
+  "plugins": [
+    "react"
   ]
 }
