@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import './App.css';
 import logo from './VidHub.JPG';
 import user from './default-user.png';
-import { Button, Form, FormGroup, InputGroup } from 'react-bootstrap';
+import { Button, Form, InputGroup } from 'react-bootstrap';
 
 export default class Navigation extends Component {
   constructor(props) {
@@ -70,20 +70,20 @@ export default class Navigation extends Component {
               </a>
               <div className="dropdown-menu dropdown-menu-right p-3" aria-labelledby="navbarDropdown">
                 <Form>
-                  <FormGroup>
+                  <Form.Group>
                     <Form.Label htmlFor="user-email">Username or email:</Form.Label>
-                    <InputGroup.Email type="email" name="user-email" id="user-email" required/>
-                  </FormGroup>
-                  <FormGroup>
+                    <Form.Control type="email" name="user-email" id="user-email" required/>
+                  </Form.Group>
+                  <Form.Group>
                     <Form.Label htmlFor="user-password">Password</Form.Label>
-                    <InputGroup.Password type="password" name="user-password" id="user-password" required/>
-                  </FormGroup>
+                    <Form.Control type="password" name="user-password" id="user-password" required/>
+                  </Form.Group>
                   <div className="remember-me checkbox">
-                    <FormGroup className="ml-4">
+                    <Form.Group className="ml-4">
                       <Form.Label htmlFor="remember">
                         <InputGroup.Checkbox type="checkbox" name="remember" id="remember" value="0" /><span>Remember me</span>
                       </Form.Label>
-                    </FormGroup>
+                    </Form.Group>
                   </div>
                   <Button type="submit" className="btn btn-success" block>Sign In</Button>
                   <div className="forgot-password">

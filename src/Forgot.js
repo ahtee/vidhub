@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Button, Form, FormGroup, InputGroup, Card } from 'react-bootstrap';
+import { Button, Form, Card } from 'react-bootstrap';
 
 export default class Forgot extends Component {
 
@@ -12,10 +12,10 @@ export default class Forgot extends Component {
                 <div className="col-lg-6 col-md-6 col-sm-12 mx-auto align-middle">
                     <Card body>
                         <Form>
-                            <FormGroup>
+                            <Form.Group>
                                 <Form.Label htmlFor="name">Enter your Email Address:</Form.Label>
-                                <InputGroup.Text type="email" name="fullname" id="email" required/>
-                            </FormGroup>
+                                <Form.Control type="email" name="fullname" id="email" required/>
+                            </Form.Group>
                             <Button type="submit" className="btn btn-danger pull-right">Send Email</Button>
                         </Form>
                     </Card>

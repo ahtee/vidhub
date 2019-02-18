@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import logo from './VidHub.JPG';
-import { Button, Card, Col, Form, FormGroup, InputGroup, Row } from 'react-bootstrap';
+import { Button, Card, Col, Form, Row } from 'react-bootstrap';
 
 export default class Login extends Component {
 
@@ -31,57 +31,57 @@ export default class Login extends Component {
                 <div className="tab-content mt-3">
                   <div className="active login-box tab-pane" id="login-pane" role="tabpanel">
                     <Form>
-                      <FormGroup>
+                      <Form.Group>
                         <Form.Label htmlFor="user-email">Username or email:</Form.Label>
-                        <InputGroup.Email type="email" name="user-email" id="user-email" required/>
-                      </FormGroup>
-                      <FormGroup>
+                        <Form.Control type="email" name="user-email" id="user-email" required/>
+                      </Form.Group>
+                      <Form.Group>
                         <Form.Label htmlFor="user-password">Password</Form.Label>
-                        <InputGroup.Password type="password" name="user-password" id="user-password" required/>
-                      </FormGroup>
+                        <Form.Control type="password" name="user-password" id="user-password" required/>
+                      </Form.Group>
                       <div class="remember-me checkbox">
-                        <FormGroup className="ml-4">
+                        <Form.Group className="ml-4">
                           <Form.Label htmlFor="remember">
-                            <InputGroup.Checkbox type="checkbox" name="remember" id="remember" value="0" />
+                            <Form.Control type="checkbox" name="remember" id="remember" value="0" />
                             <span className="pull-left">Remember me</span>
                             <div className="pull-right forgot-password">
                               <a href="/forgot">Forgot your password?</a>
                             </div>
                           </Form.Label>
-                        </FormGroup>
+                        </Form.Group>
                       </div>
                       <Button type="submit" className="btn btn-success" block>Sign In</Button>
                     </Form>
                   </div>
                   <div className="login-box tab-pane" id="register-pane" role="tabpanel">
                     <Form>
-                      <FormGroup>
+                      <Form.Group>
                         <Form.Label htmlFor="name">Full name:</Form.Label>
-                        <InputGroup.Text type="text" name="fullname" id="fullname" required/>
-                      </FormGroup>
-                      <FormGroup>
+                        <Form.Control type="text" name="fullname" id="fullname" required/>
+                      </Form.Group>
+                      <Form.Group>
                         <Form.Label htmlFor="username">Username:</Form.Label>
-                        <InputGroup.Text type="text" name="username" id="username" required/>
-                      </FormGroup>
-                      <FormGroup>
+                        <Form.Control type="text" name="username" id="username" required/>
+                      </Form.Group>
+                      <Form.Group>
                         <Form.Label htmlFor="email">Email:</Form.Label>
-                        <InputGroup.Email type="email" name="email" id="email" required/>
-                      </FormGroup>
-                      <FormGroup>
+                        <Form.Control type="email" name="email" id="email" required/>
+                      </Form.Group>
+                      <Form.Group>
                         <Form.Label htmlFor="email_confirmation">Email confirmation:</Form.Label>
-                        <InputGroup.Email type="email" name="email" id="email" required/>
-                      </FormGroup>
-                      <FormGroup>
+                        <Form.Control type="email" name="email" id="email" required/>
+                      </Form.Group>
+                      <Form.Group>
                         <Form.Label htmlFor="password">Password:</Form.Label>
-                        <InputGroup.Password type="password" name="password" id="password" required/>
-                      </FormGroup>
+                        <Form.Control type="password" name="password" id="password" required/>
+                      </Form.Group>
                       <div className="terms-and-conditions checkbox mt-3">
-                        <FormGroup className="ml-4">
+                        <Form.Group className="ml-4">
                           <Form.Label htmlFor="terms-and-conditions">
-                            <InputGroup.Checkbox type="checkbox" name="terms-and-conditions" id="terms-and-conditions" value="0" required />
+                            <Form.Control type="checkbox" name="terms-and-conditions" id="terms-and-conditions" value="0" required />
                             <span>I have read and agree to the <a href="/">Terms and Conditions</a></span>
                           </Form.Label>
-                        </FormGroup>
+                        </Form.Group>
                       </div>
                       <Button type="submit" className="btn btn-primary" block>Register</Button>
                     </Form>
