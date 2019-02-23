@@ -19,12 +19,15 @@ export default class Register extends Component {
     }
 
     handleChange(e) {
-        this.setState({fullname: e.target.value});
-        this.setState({username: e.target.value});
-        this.setState({email: e.target.value});
-        this.setState({emailConfirmation: e.target.value});
-        this.setState({password: e.target.value});
-        this.setState({termsAgreed: e.target.value});
+        const target = e.target;
+        this.setState({
+            fullname: target.value, 
+            username: target.value,
+            email: target.value,
+            emailConfirmation: target.value,
+            password: target.value,
+            termsAgreed: e.target.value
+        });
     }
 
     handleSubmit(e) {
@@ -68,7 +71,7 @@ export default class Register extends Component {
                                         </Form.Label>
                                     </Form.Group>
                                 </div>
-                                <Button type="submit" className="btn btn-primary" block="true">Create Account</Button>
+                                <Button type="submit" className="btn btn-primary" block="true" >Create Account</Button>
                             </Form>
                         </Card>
                     </div>
