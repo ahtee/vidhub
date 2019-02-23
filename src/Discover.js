@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import { Container } from 'react-bootstrap';
 
 export default class Discover extends Component {
 
@@ -36,7 +37,7 @@ export default class Discover extends Component {
                     </div>
                 </div>
             </div>
-            <div className="container">
+            <Container>
                 <div className="row topic-heat mt-4 ml-2">
                     <h3>Top Clips :scissors:</h3>
                 </div>
@@ -87,7 +88,7 @@ export default class Discover extends Component {
                         </div>
                     </div>
                 </div>
-            </div>
+            </Container>
         </div>
     );
   }

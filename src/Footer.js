@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
+import { Container } from 'react-bootstrap';
 
 export default class Footer extends Component {
   render() {
     
     return (
         <div className="vidhub-footer">
-            <div className="container">
+            <Container>
                 <div className="row">
                     <div className="col-3">
                         <ul>
@@ -33,7 +34,7 @@ export default class Footer extends Component {
                         </ul>
                     </div>
                 </div>
-            </div>
+            </Container>
         </div> 
     );
   }
