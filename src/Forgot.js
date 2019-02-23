@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Button, Form, Card } from 'react-bootstrap';
+import { Button, Container, Form, Card } from 'react-bootstrap';
 
 export default class Forgot extends Component {
 
     render() {
         
         return (
-            <div className="container-fluid">
+            <Container fluid>
                 <h2 className="text-center mt-3 mb-3">Forgot password?</h2>
                 <div className="col-lg-6 col-md-6 col-sm-12 mx-auto align-middle">
                     <Card body>
@@ -20,7 +20,7 @@ export default class Forgot extends Component {
                         </Form>
                     </Card>
                 </div>
-            </div>
+            </Container>
         );
     }
 }
