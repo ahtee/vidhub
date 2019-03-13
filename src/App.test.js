@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import FormComponent from 'FormComponent';
 import Navigation from './Navigation';
 import Login from './Login';
-import FormComponent from 'FormComponent';
 
 it('renders Navigation component without crashing', () => {
   const div = document.createElement('div');

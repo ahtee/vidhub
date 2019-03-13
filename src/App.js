@@ -11,19 +11,18 @@ import Games from './Games';
 
 export default class App extends Component {
   render() {
-    
     return (
-        <div>
-          <Navigation />
-          <Switch>
-            <Route exact path="/" component={Login} />
-            <Route path="/discover" component={Discover} />
-            <Route path="/trending" component={Trending} />
-            <Route path="/register" component={Register} />
-            <Route path="/forgot" component={Forgot} />
-            <Route path="/games" component={Games} />
-          </Switch>
-        </div>
+      <div>
+        <Navigation />
+        <Switch>
+          <Route exact path="/" component={Login} />
+          <Route path="/discover" component={Discover} />
+          <Route path="/trending" component={Trending} />
+          <Route path="/register" component={Register} />
+          <Route path="/forgot" component={Forgot} />
+          <Route path="/games" component={Games} />
+        </Switch>
+      </div>
     );
   }
 }
