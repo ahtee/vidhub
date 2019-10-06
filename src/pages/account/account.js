@@ -1,11 +1,10 @@
 import React from "react"
 import { Router } from "@reach/router"
 import { Link } from "gatsby"
-import { login, logout, isAuthenticated, getProfile } from "../utils/auth"
-
-const Overview = ({ user }) => <p>Hello {user ? `${user.name}!` : "friend!"}</p>
-const Settings = () => <p>Settings</p>
-const Billing = () => <p>Billing</p>
+import { login, logout, isAuthenticated, getProfile } from "../../utils/auth"
+import Overview from "./overview"
+import Settings from "./settings"
+import Billing from "./billing"
 
 const Account = () => {
   const user = getProfile()
@@ -28,7 +27,7 @@ const Account = () => {
             e.preventDefault()
           }}
         >
-          Log Out
+          Logout
         </a>
       </nav>
       <Router>
@@ -36,7 +35,6 @@ const Account = () => {
         <Settings path="/account/settings" />
         <Billing path="/account/billing" />
       </Router>
-      <small>This is going to be a protected route.</small>
     </div>
   )
 }
