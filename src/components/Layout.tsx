@@ -5,14 +5,13 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-import styled from "@emotion/styled"
-import { Global, css } from "@emotion/core"
-import Navigation from "./Navigation"
-import Footer from "./Footer"
-import LayoutStyles from "./Layout.module.css"
+import React from 'react'
+import PropTypes from 'prop-types'
+import { useStaticQuery, graphql } from 'gatsby'
+import styled from '@emotion/styled'
+import { Global, css } from '@emotion/core'
+import Navigation from './Navigation'
+import Footer from './Footer'
 
 const StyledLayout = styled.div`
   margin: 0 auto;
@@ -22,22 +21,25 @@ const StyledLayout = styled.div`
   min-height: 100vh;
 `
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
+interface Props {
+  data: {
+    site: {
+      siteMetadata: {
+        title: string
       }
     }
-  `)
+  }
+  children: any
+}
+
+const Layout = ({ data, children }: Props) => {
+  const siteTitle = data.site.siteMetadata.title
 
   return (
-    <React.Fragment className={LayoutStyles}>
-      <Navigation siteTitle={data.site.siteMetadata.title} />
+    <div>
+      <Navigation siteTitle={siteTitle} />
       <StyledLayout>{children}</StyledLayout>
-      <Footer siteTitle={data.site.siteMetadata.title} />
+      <Footer siteTitle={siteTitle} />
       <Global
         styles={css`
           html {
@@ -166,22 +168,22 @@ const Layout = ({ children }) => {
           select {
             text-transform: none;
           }
-          [type="reset"],
-          [type="submit"],
+          [type='reset'],
+          [type='submit'],
           button,
-          html [type="button"] {
+          html [type='button'] {
             -webkit-appearance: button;
           }
-          [type="button"]::-moz-focus-inner,
-          [type="reset"]::-moz-focus-inner,
-          [type="submit"]::-moz-focus-inner,
+          [type='button']::-moz-focus-inner,
+          [type='reset']::-moz-focus-inner,
+          [type='submit']::-moz-focus-inner,
           button::-moz-focus-inner {
             border-style: none;
             padding: 0;
           }
-          [type="button"]:-moz-focusring,
-          [type="reset"]:-moz-focusring,
-          [type="submit"]:-moz-focusring,
+          [type='button']:-moz-focusring,
+          [type='reset']:-moz-focusring,
+          [type='submit']:-moz-focusring,
           button:-moz-focusring {
             outline: 1px dotted ButtonText;
           }
@@ -201,21 +203,21 @@ const Layout = ({ children }) => {
           textarea {
             overflow: auto;
           }
-          [type="checkbox"],
-          [type="radio"] {
+          [type='checkbox'],
+          [type='radio'] {
             box-sizing: border-box;
             padding: 0;
           }
-          [type="number"]::-webkit-inner-spin-button,
-          [type="number"]::-webkit-outer-spin-button {
+          [type='number']::-webkit-inner-spin-button,
+          [type='number']::-webkit-outer-spin-button {
             height: auto;
           }
-          [type="search"] {
+          [type='search'] {
             -webkit-appearance: textfield;
             outline-offset: -2px;
           }
-          [type="search"]::-webkit-search-cancel-button,
-          [type="search"]::-webkit-search-decoration {
+          [type='search']::-webkit-search-cancel-button,
+          [type='search']::-webkit-search-decoration {
             -webkit-appearance: none;
           }
           ::-webkit-input-placeholder {
@@ -246,10 +248,10 @@ const Layout = ({ children }) => {
             font-weight: normal;
             word-wrap: break-word;
             font-kerning: normal;
-            -moz-font-feature-settings: "kern", "liga", "clig", "calt";
-            -ms-font-feature-settings: "kern", "liga", "clig", "calt";
-            -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
-            font-feature-settings: "kern", "liga", "clig", "calt";
+            -moz-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+            -ms-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+            -webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+            font-feature-settings: 'kern', 'liga', 'clig', 'calt';
           }
           img {
             max-width: 100%;
@@ -619,10 +621,10 @@ const Layout = ({ children }) => {
           th {
             text-align: left;
             border-bottom: 1px solid hsla(0, 0%, 0%, 0.12);
-            font-feature-settings: "tnum";
-            -moz-font-feature-settings: "tnum";
-            -ms-font-feature-settings: "tnum";
-            -webkit-font-feature-settings: "tnum";
+            font-feature-settings: 'tnum';
+            -moz-font-feature-settings: 'tnum';
+            -ms-font-feature-settings: 'tnum';
+            -webkit-font-feature-settings: 'tnum';
             padding-left: 0.96667rem;
             padding-right: 0.96667rem;
             padding-top: 0.725rem;
@@ -640,8 +642,8 @@ const Layout = ({ children }) => {
           code {
             background-color: hsla(0, 0%, 0%, 0.04);
             border-radius: 3px;
-            font-family: "SFMono-Regular", Consolas, "Roboto Mono",
-              "Droid Sans Mono", "Liberation Mono", Menlo, Courier, monospace;
+            font-family: 'SFMono-Regular', Consolas, 'Roboto Mono',
+              'Droid Sans Mono', 'Liberation Mono', Menlo, Courier, monospace;
             padding: 0;
             padding-top: 0.2em;
             padding-bottom: 0.2em;
@@ -655,13 +657,13 @@ const Layout = ({ children }) => {
           tt:before,
           tt:after {
             letter-spacing: -0.2em;
-            content: " ";
+            content: ' ';
           }
           pre code:before,
           pre code:after,
           pre tt:before,
           pre tt:after {
-            content: "";
+            content: '';
           }
           @media only screen and (max-width: 480px) {
             html {
@@ -670,12 +672,22 @@ const Layout = ({ children }) => {
           }
         `}
       />
-    </React.Fragment>
+    </div>
   )
 }
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired
 }
 
 export default Layout
+
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`

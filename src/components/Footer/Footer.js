@@ -1,19 +1,19 @@
-import React from "react"
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
+import React from 'react'
+import { Link } from 'gatsby'
+import PropTypes from 'prop-types'
 
 const Footer = ({ siteTitle }) => (
   <footer
     style={{
       background: `black`,
-      color: `white`,
+      color: `white`
     }}
   >
     <div
       style={{
         margin: `0 auto`,
         maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
+        padding: `1.45rem 1.0875rem`
       }}
     >
       <p style={{ margin: 0 }}>
@@ -21,7 +21,7 @@ const Footer = ({ siteTitle }) => (
           to="/"
           style={{
             color: `white`,
-            textDecoration: `none`,
+            textDecoration: `none`
           }}
         >
           {siteTitle}
@@ -33,11 +33,11 @@ const Footer = ({ siteTitle }) => (
 )
 
 Footer.propTypes = {
-  siteTitle: PropTypes.string,
+  siteTitle: PropTypes.string
 }
 
 Footer.defaultProps = {
-  siteTitle: ``,
+  siteTitle: ``
 }
 
 export default Footer

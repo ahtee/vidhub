@@ -1,6 +1,6 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import { Link } from 'gatsby'
+import PropTypes from 'prop-types'
+import React from 'react'
 
 const Navigation = ({ siteTitle }) => (
   <header
@@ -8,7 +8,7 @@ const Navigation = ({ siteTitle }) => (
       background: `#343a40`,
       marginBottom: `1.7rem`,
       color: `#51cc00`,
-      padding: `.5rem`,
+      padding: `.5rem`
     }}
   >
     <div
@@ -16,7 +16,7 @@ const Navigation = ({ siteTitle }) => (
         margin: `0 auto`,
         maxWidth: 960,
         display: `flex`,
-        alignItems: `center`,
+        alignItems: `center`
       }}
     >
       <h1 style={{ margin: 0 }}>
@@ -24,7 +24,7 @@ const Navigation = ({ siteTitle }) => (
           to="/"
           style={{
             color: `#32cd32`,
-            textDecoration: `none`,
+            textDecoration: `none`
           }}
         >
           {siteTitle}
@@ -32,7 +32,7 @@ const Navigation = ({ siteTitle }) => (
       </h1>
       <div
         style={{
-          marginLeft: "auto",
+          marginLeft: 'auto'
         }}
       >
         <Link
@@ -40,7 +40,7 @@ const Navigation = ({ siteTitle }) => (
           style={{
             color: `#51cc00`,
             textDecoration: `none`,
-            margin: "0px 7px",
+            margin: '0px 7px'
           }}
         >
           Browse
@@ -50,7 +50,7 @@ const Navigation = ({ siteTitle }) => (
           style={{
             color: `#51cc00`,
             textDecoration: `none`,
-            marginLeft: "auto",
+            marginLeft: 'auto'
           }}
         >
           Login
@@ -61,11 +61,11 @@ const Navigation = ({ siteTitle }) => (
 )
 
 Navigation.propTypes = {
-  siteTitle: PropTypes.string,
+  siteTitle: PropTypes.string
 }
 
 Navigation.defaultProps = {
-  siteTitle: ``,
+  siteTitle: ``
 }
 
 export default Navigation

@@ -12,7 +12,7 @@ exports.onCreatePage = async ({ page, actions }) => {
   // page.matchPath is a special key that's used for matching pages
   // only on the client.
   if (page.path.match(/^\/account/)) {
-    page.matchPath = "/account/*"
+    page.matchPath = '/account/*'
 
     // Update the page.
     createPage(page)
@@ -20,7 +20,7 @@ exports.onCreatePage = async ({ page, actions }) => {
 }
 
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
-  if (stage === "build-html") {
+  if (stage === 'build-html') {
     /*
      * During the build step, `auth0-js` will break because it relies on
      * browser-specific APIs. Fortunately, we don’t need it during the build.
@@ -33,10 +33,10 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
         rules: [
           {
             test: /auth0-js/,
-            use: loaders.null(),
-          },
-        ],
-      },
+            use: loaders.null()
+          }
+        ]
+      }
     })
   }
 }

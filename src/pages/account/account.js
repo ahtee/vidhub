@@ -1,10 +1,10 @@
-import React from "react"
-import { Router } from "@reach/router"
-import { Link } from "gatsby"
-import { login, logout, isAuthenticated, getProfile } from "../../utils/auth"
-import Overview from "./overview"
-import Settings from "./settings"
-import Billing from "./billing"
+import React from 'react'
+import { Router } from '@reach/router'
+import { Link } from 'gatsby'
+import { login, logout, isAuthenticated, getProfile } from '../../utils/auth'
+import Overview from './overview'
+import Settings from './settings'
+import Billing from './billing'
 
 const Account = () => {
   const user = getProfile()
