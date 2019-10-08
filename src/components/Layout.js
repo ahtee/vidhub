@@ -1,16 +1,9 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from 'react'
 import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 import styled from '@emotion/styled'
 import { Global, css } from '@emotion/core'
-import Navigation from './Navigation'
+import Navigation from './Navigation/Navigation'
 import Footer from './Footer'
 
 const StyledLayout = styled.div`
@@ -21,25 +14,30 @@ const StyledLayout = styled.div`
   min-height: 100vh;
 `
 
-interface Props {
-  data: {
-    site: {
-      siteMetadata: {
-        title: string
+function Layout({ children }) {
+  const data = useStaticQuery(graphql`
+    query HeaderQuery {
+      site {
+        siteMetadata {
+          title
+        }
       }
     }
-  }
-  children: any
-}
+  `)
 
-const Layout = ({ data, children }: Props) => {
-  const siteTitle = data.site.siteMetadata.title
+  const navLinks = [
+    { to: '/browse', title: 'Browse' },
+    { to: '/account', title: 'Account' }
+  ]
 
   return (
     <div>
-      <Navigation siteTitle={siteTitle} />
+      <Navigation
+        siteTitle={data.site.siteMetadata.title}
+        navLinks={navLinks}
+      />
       <StyledLayout>{children}</StyledLayout>
-      <Footer siteTitle={siteTitle} />
+      <Footer siteTitle={data.site.siteMetadata.title} />
       <Global
         styles={css`
           html {
@@ -681,13 +679,3 @@ Layout.propTypes = {
 }
 
 export default Layout
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`
