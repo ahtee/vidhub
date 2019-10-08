@@ -1,0 +1,21 @@
+version: 0.2
+phases:    
+  install:   
+    runtime-versions:
+      nodejs: 8
+      nodejs: 10     
+    commands:           
+      - npm install -g gatsby
+    pre_build: 
+        commands:
+          - npm install
+    build:
+        commands:
+          - gatsby build
+artifacts:
+  files:
+    - "**/*"
+  base-directory: build
+cache:
+  paths:
+    - node_modules/**/*

@@ -1,1 +1,3 @@
+![CodeBuild Status](https://codebuild.us-east-2.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiZU9ZMkNMVXdWUHptb05CbXpKVDZoY3hFMDNtenpjckhqcVZSN3ZWdkVyQ2xBQnJ0Y2N2ZWJpZVoremZLT25YeXo0alI0a1BQRHNNRkplN2NwcmZSb0V3PSIsIml2UGFyYW1ldGVyU3BlYyI6InhSUXVTSzRtbVk3Y1FQa3kiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=master)
+
 # VidHub
