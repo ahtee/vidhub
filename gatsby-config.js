@@ -11,7 +11,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-s3`,
       options: {
-        bucketName: process.env.S3_BUCKET,
+        bucketName: `${process.env.S3_BUCKET}`,
         protocol: 'https',
         hostname: 'vidhub.org'
       }
